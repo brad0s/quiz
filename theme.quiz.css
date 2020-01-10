@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Noto Sans';
+}
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+.btn {
+  --hue: var(--hue-neutral);
+  border: 0.1rem solid hsl(var(--hue), 100%, 30%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  outline: none;
+  background-color: hsl(var(--hue), 100%, 50%);
+}
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+body.correct {
+  --hue: var(--hue-correct);
+}
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+body .hide {
+  display: none;
+}
+body .container {
+  width: 80rem;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 0 1rem 0.2rem;
+}
+body .container #question {
+  font-size: 1.8rem;
+}
+body .container .btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+body .container .btn-grid .btn {
+  --hue: var(--hue-neutral);
+  border: 0.1rem solid hsl(var(--hue), 100%, 30%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  outline: none;
+  background-color: hsl(var(--hue), 100%, 50%);
+  font-size: 1.8rem;
+}
+body .container .btn-grid .btn:hover {
+  border-color: black;
+}
+body .container .btn-grid .btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+body .container .btn-grid .btn.wrong {
+  --hue: var(--hue-wrong);
+}
+body .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .controls .btn {
+  --hue: var(--hue-neutral);
+  border: 0.1rem solid hsl(var(--hue), 100%, 30%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  outline: none;
+  background-color: hsl(var(--hue), 100%, 50%);
+}
+body .controls .start-btn,
+body .controls .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
